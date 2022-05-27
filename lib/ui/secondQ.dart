@@ -4,8 +4,9 @@ import 'package:with_me_app/ui/ResultPage.dart';
 import '../model/setting.dart';
 
 class SecondQPage extends ConsumerWidget {
+  const SecondQPage(this.firstAnswer, {Key? key}) : super(key: key);
+  final int? firstAnswer;
 
-  const SecondQPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
@@ -46,39 +47,55 @@ class SecondQPage extends ConsumerWidget {
               const SizedBox(height: kToolbarHeight+ 50),
               Image.asset('assets/images/top_page_image/anattanipittari!.png',height: 60,),
               const SizedBox(height: 30),
-              Container(
-                decoration: BoxDecoration(
-                    color: beigeColor,
-                    borderRadius: BorderRadius.circular(30)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(40,20,40,40),
-                  child: Column(
-                    children: [
-                      const Text('診断２',
-                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                      const SizedBox(height: 20),
-                      const Text('どういう機能が１番嬉しいですか？',
-                        style: TextStyle(fontSize: 18),),
-                      const SizedBox(height: 30),
-                      GestureDetector(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ResultPage()
-                              ),
-                            );
-                          },
+            Container(
+              decoration: BoxDecoration(
+                  color: beigeColor,
+                  borderRadius: BorderRadius.circular(30)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(40,20,40,40),
+                child: Column(
+                  children: [
+                    const Text('診断２',
+                      style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                    const SizedBox(height: 20),
+                    const Text('どういう機能が１番嬉しいですか？',
+                      style: TextStyle(fontSize: 18),),
+                    const SizedBox(height: 30),
+                    GestureDetector(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ResultPage(firstAnswer,1)
+                            ),
+                          );
+                        },
                         child: answer('①香りやデザインがある')
-                      ),
-                      const SizedBox(height: 20),
-                      GestureDetector(
-                          child: answer('②肌に優しい')
-                      ),
-                      const SizedBox(height: 20),
-                      GestureDetector(
-                          child: answer('③軽い・かさばらない')
+                    ),
+                    const SizedBox(height: 20),
+                    GestureDetector(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ResultPage(firstAnswer,2)
+                            ),
+                          );
+                        },
+                        child: answer('②肌に優しい')
+                    ),
+                    const SizedBox(height: 20),
+                    GestureDetector(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ResultPage(firstAnswer,3)
+                            ),
+                          );
+                        },
+                        child: answer('③軽い・かさばらない')
                       ),
                     ],
                   ),

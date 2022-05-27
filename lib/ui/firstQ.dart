@@ -37,7 +37,7 @@ class FirstQPage extends ConsumerWidget {
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/backgroundd.png'),
+                image: AssetImage('assets/images/backgroundImage.png'),
                 fit: BoxFit.cover,
               )),
           child: Center(
@@ -66,8 +66,7 @@ class FirstQPage extends ConsumerWidget {
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                  const SecondQPage()
+                                  builder: (context) => const SecondQPage(1)
                               ),
                             );
                           },
@@ -80,7 +79,7 @@ class FirstQPage extends ConsumerWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                  const SecondQPage()
+                                  const SecondQPage(2)
                               ),
                             );
                           },
@@ -93,7 +92,7 @@ class FirstQPage extends ConsumerWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                  const SecondQPage()
+                                  const SecondQPage(3)
                               ),
                             );
                           },

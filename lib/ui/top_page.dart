@@ -22,7 +22,7 @@ class MyHomePage extends ConsumerWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/background.png'),
+              image: AssetImage('assets/images/backgroundImage.png'),
               fit: BoxFit.cover,
             )),
         child: Center(
@@ -32,7 +32,7 @@ class MyHomePage extends ConsumerWidget {
               Image.asset('assets/images/top_page_image/anattanipittari!.png',height: 130,),
               Padding(
                 padding: const EdgeInsets.fromLTRB(8,20,8,0),
-                child: Image.asset('assets/images/top_page_image/girl.png',height: 250,),
+                child: Image.asset('assets/images/top_page_image/girl.png',height: 200,),
               ),
               const Padding(
                 padding: EdgeInsets.all(15),
