@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:with_me_app/ui/top_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(child: MyApp()
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,36 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'withME 診断',
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
       home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('withME 診断'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('')
-          ],
-        ),
-      ),
-    );
-  }
-}
