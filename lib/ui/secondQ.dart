@@ -66,41 +66,50 @@ class SecondQPage extends ConsumerWidget {
                     const Text('どういう機能が１番嬉しいですか？',
                       style: TextStyle(fontSize: 18),),
                     SizedBox(height: 30.h),
-                    GestureDetector(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ResultPage(firstAnswer,1)
-                            ),
-                          );
-                        },
-                        child: answer('①香りやデザインがある')
-                    ),
-                    SizedBox(height: 20.h),
-                    GestureDetector(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ResultPage(firstAnswer,2)
-                            ),
-                          );
-                        },
-                        child: answer('②肌に優しい')
-                    ),
-                    SizedBox(height: 20.h),
-                    GestureDetector(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ResultPage(firstAnswer,3)
-                            ),
-                          );
-                        },
-                        child: answer('③軽い・かさばらない')
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ResultPage(firstAnswer,1)
+                              ),
+                            );
+                          },
+                          child: answer('①香りやデザインがある')
                       ),
+                    ),
+                    SizedBox(height: 20.h),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ResultPage(firstAnswer,2)
+                              ),
+                            );
+                          },
+                          child: answer('②肌に優しい')
+                      ),
+                    ),
+                    SizedBox(height: 20.h),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ResultPage(firstAnswer,3)
+                              ),
+                            );
+                          },
+                          child: answer('③軽い・かさばらない')
+                        ),
+                    ),
                     ],
                   ),
                 ),

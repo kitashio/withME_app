@@ -4,30 +4,33 @@ import 'package:with_me_app/Item.dart';
 import 'package:with_me_app/ui/item_detail_page.dart';
 
 Widget _item (context,int index,String title,String imageURL,String type){
-  return GestureDetector(
-    onTap: () async {
-      await Navigator.push(
-        context,
-        MaterialPageRoute(
-            fullscreenDialog: true,
-            builder: (context) => ItemDetailPage(currentIndex: index, type: type)
+  return MouseRegion(
+    cursor: SystemMouseCursors.click,
+    child: GestureDetector(
+      onTap: () async {
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+              fullscreenDialog: true,
+              builder: (context) => ItemDetailPage(currentIndex: index, type: type)
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(8,20,8,10),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20)
         ),
-      );
-    },
-    child: Container(
-      padding: const EdgeInsets.fromLTRB(8,20,8,10),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20)
-      ),
-      child: Column(
-        children: [
-          Text(title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontWeight: FontWeight.bold),),
-          SizedBox(height: 20.h),
-          Image.asset(imageURL,height: 70.h,width: 80.w),
-        ],
+        child: Column(
+          children: [
+            Text(title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontWeight: FontWeight.bold),),
+            SizedBox(height: 20.h),
+            Image.asset(imageURL,height: 70.h,width: 80.w),
+          ],
+        ),
       ),
     ),
   );

@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,16 +13,12 @@ void main() {
     DeviceOrientation.portraitUp,//縦固定
   ]);
   runApp(
-    DevicePreview(
-      builder: (BuildContext context) {
-        return ScreenUtilInit(
+    ScreenUtilInit(
           designSize: const Size(360, 690),
           builder: (BuildContext context, Widget? child) {
             return const ProviderScope(child: MyApp(key: null)
             );
           },
-        );
-      },
     ),
   );
 }

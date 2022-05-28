@@ -48,20 +48,23 @@ class MyHomePage extends ConsumerWidget {
                 style: TextStyle(
                   fontSize: 17)),
               ),
-              GestureDetector(
-                onTap: () async {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                        const FirstQPage()
-                    ),
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(8,30,8,0),
-                  child: Image.asset('assets/images/top_page_image/診断スタート！.png',height: 80),
-                )),
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const FirstQPage()
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(8,30,8,0),
+                    child: Image.asset('assets/images/top_page_image/診断スタート！.png',height: 80),
+                  )),
+              ),
             ],
           ),
         ),

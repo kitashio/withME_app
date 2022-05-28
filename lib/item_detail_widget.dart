@@ -134,16 +134,19 @@ Widget itemDetail (
                 ],
               ),
               SizedBox(height: 20.h),
-              GestureDetector(
-                onTap: () async {
-                  final Uri _url = Uri.parse(hpURL);
-                  if (!await launchUrl(_url)) {
-                  } else {
-                    throw 'このURLにはアクセスできません';
-                  }
-                },
-                child: Image.asset('assets/images/kousiki.png',
-                  height: 50),
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () async {
+                    final Uri _url = Uri.parse(hpURL);
+                    if (!await launchUrl(_url)) {
+                    } else {
+                      throw 'このURLにはアクセスできません';
+                    }
+                  },
+                  child: Image.asset('assets/images/kousiki.png',
+                    height: 50),
+                ),
               ),
             ],
           ),

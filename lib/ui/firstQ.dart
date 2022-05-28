@@ -66,42 +66,51 @@ class FirstQPage extends ConsumerWidget {
                           const Text('どういう種類の生理用品を\n知りたいですか？',
                             style: TextStyle(fontSize: 18),),
                           SizedBox(height: 30.h),
-                          GestureDetector(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const SecondQPage(1)
-                                ),
-                              );
-                            },
-                            child: answer('①　軽い日用')
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const SecondQPage(1)
+                                  ),
+                                );
+                              },
+                              child: answer('①　軽い日用')
+                            ),
                           ),
                          SizedBox(height: 20.h),
-                          GestureDetector(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                    const SecondQPage(2)
-                                ),
-                              );
-                            },
-                            child: answer('②　普通の日用')
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const SecondQPage(2)
+                                  ),
+                                );
+                              },
+                              child: answer('②　普通の日用')
+                            ),
                           ),
                           SizedBox(height: 20.h),
-                          GestureDetector(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                    const SecondQPage(3)
-                                ),
-                              );
-                            },
-                            child: answer('③　運動するとき・夜用')
+                          MouseRegion(
+                            cursor: SystemMouseCursors.click,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const SecondQPage(3)
+                                  ),
+                                );
+                              },
+                              child: answer('③　運動するとき・夜用')
+                            ),
                           ),
                         ],
                       ),
