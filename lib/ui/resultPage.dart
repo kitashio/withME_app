@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:with_me_app/itemWidget.dart';
-import 'package:with_me_app/ui/type.dart';
+import 'package:with_me_app/type.dart';
 import '../model/setting.dart';
 
 class ResultPage extends ConsumerWidget {
@@ -11,13 +12,19 @@ class ResultPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
+    var size = MediaQuery.of(context).size;
+    double deviceHeight = size.height;
+    double deviceWidth = size.width;
+
+    /*24 is for notification bar on Android*/
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 3.5;
+    final double itemWidth = size.width / 2;
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('WithME',
-            style: TextStyle(fontWeight: FontWeight.bold),),
+          title: Image.asset(
+              'assets/images/top_page_image/anattanipittari!.png',
+              height: 40.h),
           backgroundColor: appbarColor,
           elevation: 0,
           shape: const Border(
@@ -37,22 +44,21 @@ class ResultPage extends ConsumerWidget {
             child: Center(
               child: Column(
                 children: [
-                  const SizedBox(height: kToolbarHeight+ 50),
-                  Image.asset('assets/images/top_page_image/anattanipittari!.png',height: 60,),
-                  const SizedBox(height: 20),
+                  SizedBox(height: kToolbarHeight + 80.h),
                   Text(type(firstAnswer, secondAnswer) + 'タイプ',
                     style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   const Text('あなたに合う生理用品はこちら！',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                   GridView.count(
                     crossAxisCount: 2,
+                    childAspectRatio: (itemWidth / itemHeight),
                     shrinkWrap: true,
-                    mainAxisSpacing: 2.0,
-                    crossAxisSpacing: 2.0,
-                    padding: const EdgeInsets.fromLTRB(5,20,5,10),
+                    mainAxisSpacing: 15.0,
+                    crossAxisSpacing: 10.0,
+                    padding: const EdgeInsets.fromLTRB(8,20,8,10),
                     physics: const NeverScrollableScrollPhysics(),
-                    children: list(firstAnswer,secondAnswer),
+                    children: list(context,firstAnswer,secondAnswer),
                   ),
                 ],
               ),
