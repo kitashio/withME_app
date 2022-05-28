@@ -22,7 +22,7 @@ class MyHomePage extends ConsumerWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/backgroundImage.png'),
+              image: AssetImage('assets/images/background.png'),
               fit: BoxFit.cover,
             )),
         child: Center(

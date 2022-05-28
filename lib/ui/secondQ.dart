@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:with_me_app/ui/ResultPage.dart';
+import 'package:with_me_app/ui/resultPage.dart';
 import '../model/setting.dart';
 
 class SecondQPage extends ConsumerWidget {
@@ -53,7 +53,7 @@ class SecondQPage extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(30)
               ),
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(40,20,40,40),
+                padding: const EdgeInsets.fromLTRB(25,20,25,20),
                 child: Column(
                   children: [
                     const Text('診断２',
