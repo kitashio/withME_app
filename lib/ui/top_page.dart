@@ -35,10 +35,10 @@ class MyHomePage extends ConsumerWidget {
           child: Column(
             children: [
               SizedBox(height: kToolbarHeight+ 30.h),
-              Image.asset('assets/images/top_page_image/anattanipittari!.png',height: 130),
+              Image.asset('assets/images/anattanipittari!.png',height: 130),
               Padding(
                 padding: const EdgeInsets.fromLTRB(8,20,8,0),
-                child: Image.asset('assets/images/top_page_image/girl.png',height: 200),
+                child: Image.asset('assets/images/girl.png',height: 200),
               ),
               SizedBox(height: 30.h),
               const Padding(
@@ -62,7 +62,7 @@ class MyHomePage extends ConsumerWidget {
                   },
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(8,30,8,0),
-                    child: Image.asset('assets/images/top_page_image/診断スタート！.png',height: 80),
+                    child: Image.asset('assets/images/診断スタート！.png',height: 80),
                   )),
               ),
             ],

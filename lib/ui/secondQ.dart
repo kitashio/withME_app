@@ -30,7 +30,7 @@ class SecondQPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-            'assets/images/top_page_image/anattanipittari!.png',
+            'assets/images/anattanipittari!.png',
             height: 40.h),
         backgroundColor: appbarColor,
         elevation: 0,

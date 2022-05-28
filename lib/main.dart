@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'withME 診断',
+      title: '生理用品診断！あなたにピッタリ！ by withME',
       theme: ThemeData(
         textTheme: GoogleFonts.zenMaruGothicTextTheme(),
       ),

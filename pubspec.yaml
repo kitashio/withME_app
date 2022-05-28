@@ -15,17 +15,23 @@ dependencies:
   google_fonts: ^3.0.1
   device_preview: ^1.1.0
   flutter_screenutil: ^5.5.3+2
+  flutter_launcher_icons: ^0.9.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/girl.png"
+
+
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/images/top_page_image/
     - assets/images/A/
     - assets/images/B/
     - assets/images/C/
