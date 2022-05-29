@@ -16,142 +16,137 @@ Widget itemDetail (
     String hpURL){
 
   return SingleChildScrollView(
-    child: Column(
-      children: [
-        SizedBox(height: kToolbarHeight+ 40.h),
-        Container(
-          padding: const EdgeInsets.fromLTRB(5,30,5,30),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(25)
-          ),
-          child: Column(
+    child: Container(
+      padding: const EdgeInsets.fromLTRB(5,30,5,30),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(25)
+      ),
+      child: Column(
+        children: [
+          Text(title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+          SizedBox(height: 30.h),
+          Image.asset(imageURL,height: 200.h,width: 200.w),
+          SizedBox(height: 30.h),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(title,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-              SizedBox(height: 30.h),
-              Image.asset(imageURL,height: 200.h,width: 200.w),
-              SizedBox(height: 30.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                      width: 150.w,
-                      padding: const EdgeInsets.fromLTRB(15,10,15,10),
-                      decoration: BoxDecoration(
-                          color:Colors.white.withOpacity(0.7),
-                          borderRadius: BorderRadius.circular(20)
+              Container(
+                  width: 150.w,
+                  padding: const EdgeInsets.fromLTRB(15,10,15,10),
+                  decoration: BoxDecoration(
+                      color:Colors.white.withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('用途'),
+                      const Divider(
+                        color: Colors.black54,
+                        thickness: 1,
                       ),
-                      child: Column(
-                        children: [
-                          const Text('用途'),
-                          const Divider(
-                            color: Colors.black54,
-                            thickness: 1,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(use,
-                              style: const TextStyle(fontWeight: FontWeight.bold),),
-                          ),
-                        ],
-                      )),
-                  Container(
-                      width: 150.w,
-                      padding: const EdgeInsets.fromLTRB(15,10,15,10),
-                      decoration: BoxDecoration(
-                          color:Colors.white.withOpacity(0.7),
-                          borderRadius: BorderRadius.circular(20)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(use,
+                          style: const TextStyle(fontWeight: FontWeight.bold),),
                       ),
-                      child: Column(
-                        children: [
-                          const Text('キーワード'),
-                          const Divider(
-                            color: Colors.black54,
-                            thickness: 1,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(keyword1,
-                              style: const TextStyle(fontWeight: FontWeight.bold),),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(keyword2,
-                              style: const TextStyle(fontWeight: FontWeight.bold),),
-                          ),
-                        ],
-                      )),
-                ],
-              ),
-              SizedBox(height: 20.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                      width: 150.w,
-                      padding: const EdgeInsets.fromLTRB(15,10,15,10),
-                      decoration: BoxDecoration(
-                          color:Colors.white.withOpacity(0.7),
-                          borderRadius: BorderRadius.circular(20)
+                    ],
+                  )),
+              Container(
+                  width: 150.w,
+                  padding: const EdgeInsets.fromLTRB(15,10,15,10),
+                  decoration: BoxDecoration(
+                      color:Colors.white.withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('キーワード'),
+                      const Divider(
+                        color: Colors.black54,
+                        thickness: 1,
                       ),
-                      child: Column(
-                        children: [
-                          const Text('大きさ'),
-                          const Divider(
-                            color: Colors.black54,
-                            thickness: 1,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(size,
-                              style: const TextStyle(fontWeight: FontWeight.bold),),
-                          ),
-                        ],
-                      )),
-                  Container(
-                      width: 150.w,
-                      padding: const EdgeInsets.fromLTRB(15,10,15,10),
-                      decoration: BoxDecoration(
-                          color:Colors.white.withOpacity(0.7),
-                          borderRadius: BorderRadius.circular(20)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(keyword1,
+                          style: const TextStyle(fontWeight: FontWeight.bold),),
                       ),
-                      child: Column(
-                        children: [
-                          const Text('羽'),
-                          const Divider(
-                            color: Colors.black54,
-                            thickness: 1,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(wing,
-                              style: const TextStyle(fontWeight: FontWeight.bold),),
-                          ),
-                        ],
-                      )),
-                ],
-              ),
-              SizedBox(height: 20.h),
-              MouseRegion(
-                cursor: SystemMouseCursors.click,
-                child: GestureDetector(
-                  onTap: () async {
-                    final Uri _url = Uri.parse(hpURL);
-                    if (!await launchUrl(_url)) {
-                    } else {
-                      throw 'このURLにはアクセスできません';
-                    }
-                  },
-                  child: Image.asset('assets/images/kousiki.png',
-                    height: 50),
-                ),
-              ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(keyword2,
+                          style: const TextStyle(fontWeight: FontWeight.bold),),
+                      ),
+                    ],
+                  )),
             ],
           ),
-        ),
+          SizedBox(height: 20.h),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                  width: 150.w,
+                  padding: const EdgeInsets.fromLTRB(15,10,15,10),
+                  decoration: BoxDecoration(
+                      color:Colors.white.withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('大きさ'),
+                      const Divider(
+                        color: Colors.black54,
+                        thickness: 1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(size,
+                          style: const TextStyle(fontWeight: FontWeight.bold),),
+                      ),
+                    ],
+                  )),
+              Container(
+                  width: 150.w,
+                  padding: const EdgeInsets.fromLTRB(15,10,15,10),
+                  decoration: BoxDecoration(
+                      color:Colors.white.withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Column(
+                    children: [
+                      const Text('羽'),
+                      const Divider(
+                        color: Colors.black54,
+                        thickness: 1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(wing,
+                          style: const TextStyle(fontWeight: FontWeight.bold),),
+                      ),
+                    ],
+                  )),
+            ],
+          ),
+          SizedBox(height: 20.h),
+          MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: GestureDetector(
+              onTap: () async {
+                final Uri _url = Uri.parse(hpURL);
+                if (!await launchUrl(_url)) {
+                } else {
+                  throw 'このURLにはアクセスできません';
+                }
+              },
+              child: Image.asset('assets/images/kousiki.png',
+                height: 50),
+            ),
+          ),
         ],
+      ),
     ),
   );
 }
