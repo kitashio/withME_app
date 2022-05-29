@@ -18,7 +18,7 @@ Widget itemDetail (
   return SingleChildScrollView(
     child: Column(
       children: [
-        SizedBox(height: kToolbarHeight+ 70.h),
+        SizedBox(height: kToolbarHeight+ 40.h),
         Container(
           padding: const EdgeInsets.fromLTRB(5,30,5,30),
           decoration: BoxDecoration(

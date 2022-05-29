@@ -20,7 +20,7 @@ class Item {
   String? hpURL;
 }
 
-final List<Item> typeA = [
+final typeA = [
   Item('はだおもい ライナー 香り付き','assets/images/A/1.png','A','おりものの日','香り付','ずれない','14cm','','https://www.sofy.jp/ja/products/hadaomoi_liner/p_floral.html?adobe_mc=MCMID%3D50068844561448911592821121261765412623%7CMCORGID%3D2C3DA7AF5838AA630A495DE6%2540AdobeOrg%7CTS%3D1645334975'),
   Item('はだおもい　ライナー　グリーンプラス','assets/images/A/2.png','A','おりものの日','抗菌シート','サラサラキープ','14cm','','https://www.sofy.jp/ja/products/hadaomoi_liner/p_cleanplus.html'),
   Item('極薄スリム　軽い日用','assets/images/A/3.png','	A','軽い日','優しい肌触り','デザイン','17.5cm','なし','https://www.sofy.jp/ja/products/hadaomoi/slim_p_day_light.html?adobe_mc=MCMID%3D50068844561448911592821121261765412623%7CMCORGID%3D2C3DA7AF5838AA630A495DE6%2540AdobeOrg%7CTS%3D1645332119'),

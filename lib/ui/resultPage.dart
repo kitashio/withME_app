@@ -44,7 +44,7 @@ class ResultPage extends ConsumerWidget {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(height: kToolbarHeight + 80.h),
+                  SizedBox(height: kToolbarHeight + 40.h),
                   Text(type(firstAnswer, secondAnswer) + 'タイプ',
                     style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
                   SizedBox(height: 20.h),
