@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:with_me_app/item_detail_widget.dart';
 import 'package:with_me_app/model/setting.dart';
 
-class ItemDetailPage extends ConsumerWidget {
+class ItemDetailPage extends StatelessWidget {
   ItemDetailPage({Key? key,
     required this.currentIndex,
     required this.type,
@@ -17,7 +16,7 @@ class ItemDetailPage extends ConsumerWidget {
   double deviceWidth = 0;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     PageController _controller = PageController(initialPage: currentIndex);
     deviceHeight = MediaQuery.of(context).size.height;
     deviceWidth = MediaQuery.of(context).size.width;
@@ -63,7 +62,7 @@ class ItemDetailPage extends ConsumerWidget {
                         onDotClicked: (index) =>
                             _controller.animateToPage(
                                 index,
-                                duration: const Duration(milliseconds: 100),
+                                duration: const Duration(milliseconds: 0),
                                 curve: Curves.bounceOut)
                     ),
                   ),

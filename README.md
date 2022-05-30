@@ -1,16 +1,8 @@
-# with_me_app
+# 生理用品診断のサイト（友達から依頼）
 
-A new Flutter project.
+生理用品の事業をやっている友達から、
+その人に合った商品を見つけられる診断サイトを作って欲しいと依頼があったので
+作成しました。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+どんな雰囲気が良いか、診断のフローなど友達の要望に沿って
+背景やトップに表示される画像なども自ら手掛け、実装しました。

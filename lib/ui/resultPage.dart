@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:with_me_app/itemWidget.dart';
 import 'package:with_me_app/type.dart';
 import '../model/setting.dart';
 
-class ResultPage extends ConsumerWidget {
+class ResultPage extends StatelessWidget {
   const ResultPage(this.firstAnswer, this.secondAnswer, {Key? key}) : super(key: key);
   final int? firstAnswer;
   final int? secondAnswer;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     double deviceHeight = size.height;
     double deviceWidth = size.width;
