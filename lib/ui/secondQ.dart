@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:with_me_app/ui/resultPage.dart';
-import '../model/setting.dart';
+import '../setting.dart';
 
 class SecondQPage extends StatelessWidget {
   const SecondQPage(this.firstAnswer, {Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:with_me_app/item_detail_widget.dart';
-import 'package:with_me_app/model/setting.dart';
+import 'package:with_me_app/setting.dart';
 
 class ItemDetailPage extends StatelessWidget {
   ItemDetailPage({Key? key,

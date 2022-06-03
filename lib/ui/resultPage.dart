@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:with_me_app/itemWidget.dart';
+import 'package:with_me_app/item_widget.dart';
 import 'package:with_me_app/type.dart';
-import '../model/setting.dart';
+import '../setting.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage(this.firstAnswer, this.secondAnswer, {Key? key}) : super(key: key);
